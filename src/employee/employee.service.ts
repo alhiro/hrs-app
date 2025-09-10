@@ -30,7 +30,7 @@ export class EmployeeService {
   }
 
   findAll() {
-    return this.repo.find();
+    return this.repo.find(({ relations: ['leave'] }));
   }
 
   async findOne(id: number) {
